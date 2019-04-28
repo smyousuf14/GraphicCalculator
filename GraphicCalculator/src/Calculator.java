@@ -10,7 +10,7 @@ import java.math.*;
  */
 public class Calculator 
 {
-    private int currentDisplay;
+    private double currentDisplay;
     
     
     /*Defualt Constructor*/
@@ -23,7 +23,7 @@ public class Calculator
     * Return the currentDisplay value
     *@return currentDisplay
     */
-    public int getCurrentDisplay()
+    public double getCurrentDisplay()
     {
         return currentDisplay;
     }
@@ -37,7 +37,7 @@ public class Calculator
     */
     public void add(int num1, int num2)
     {
-        currentDisplay = num1 + num2;
+        currentDisplay = (double)num1 + num2;
     }
     
     /*
@@ -47,7 +47,7 @@ public class Calculator
     */
     public void subtract(int num1, int num2)
     {
-        currentDisplay = num1 - num2;
+        currentDisplay = (double)num1 - num2;
     }
     
     /*
@@ -57,7 +57,7 @@ public class Calculator
     */
     public void multiply(int num1, int num2)
     {
-        currentDisplay = num1 * num2;
+        currentDisplay = (double)num1 * num2;
     }
     
     /*
@@ -67,13 +67,14 @@ public class Calculator
     */
     public void divide(int num1, int num2)
     {
-        BigDecimal first = new BigDecimal(num1);
-        BigDecimal second = new BigDecimal(num2);
-        BigDecimal result = first.divide(second, 2, BigDecimal.ROUND_HALF_UP);
-        
         /*Set currentdisplay value*/
-        currentDisplay = result.intValueExact();
+        currentDisplay = (double)num1/num2;
     }
+    
+    /*
+    * The string representation 
+    */
+    
     
     public static void main(String []args)
     {
