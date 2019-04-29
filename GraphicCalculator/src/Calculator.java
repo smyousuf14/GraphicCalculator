@@ -72,8 +72,14 @@ public class Calculator
     }
     
     /*
-    * The string representation 
+    * The string representation of this class
     */
+    @Override
+    public String toString()
+    {
+        
+        return "" + currentDisplay; 
+    }
     
     
     public static void main(String []args)
