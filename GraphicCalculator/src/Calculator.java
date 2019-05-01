@@ -82,21 +82,5 @@ public class Calculator
     }
     
     
-    public static void main(String []args)
-    {
-        
-        Calculator c1 = new Calculator();
-        
-        c1.add(1,2);
-        System.out.println(c1.getCurrentDisplay());
-        
-        c1.subtract(4,2);
-        System.out.println(c1.getCurrentDisplay());
-        
-        c1.multiply(3,4);
-        System.out.println(c1.getCurrentDisplay());
-        
-        c1.divide(1,3);
-        System.out.println(c1.getCurrentDisplay());
-    }
+    
 }

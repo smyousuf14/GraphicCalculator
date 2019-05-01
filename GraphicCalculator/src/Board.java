@@ -17,9 +17,7 @@ public class Board
     private String register;
     private int[] num;
     private boolean onceOnly;
-    private int tempNum; /*The value of the num that it is currently on*/
-    
-    /*Space*/
+    private int currentNum; /*The value of the num that it is currently on*/
     
     
     /*
@@ -30,8 +28,8 @@ public class Board
         newCal = new Calculator();
         operationName = "";
         register = "";
-        num = new int[100];
-        tempNum = 0;
+        num = new int[10];
+        currentNum = 0;
         onceOnly = false;
        
         
@@ -156,7 +154,7 @@ public class Board
                 /*Perform operation all the numbers*/
                 if(onceOnly == false)
                 {
-                num[2] = Integer.parseInt(register);
+                    num[2] = Integer.parseInt(register);
                 
                 
                 if(operationName == "add")
